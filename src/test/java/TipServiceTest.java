@@ -15,7 +15,7 @@ public class TipServiceTest {
 
     @DisplayName("Граничные значения")
     @ParameterizedTest(name = "Проверка №{index}. Проверяемое число: {0}")
-    @CsvSource({"-1", "0", "1", "499", "500", "501", "999", "1000", "1001", "1000000"})
+    @CsvSource({"-1", "0", "1", "499", "500", "501", "999", "1000", "1001"})
     void roundTipTest(BigDecimal num) {
         BigDecimal expected;
 

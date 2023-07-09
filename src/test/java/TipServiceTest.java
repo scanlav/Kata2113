@@ -32,6 +32,6 @@ public class TipServiceTest {
     @ParameterizedTest
     @NullSource
     void roundTipNullTest(BigDecimal num) {
-        Assertions.assertThrows(NullPointerException.class, () -> tipService.roundTips(num));
+        assertThrows(NullPointerException.class, () -> tipService.roundTips(num));
     }
 }

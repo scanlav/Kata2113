@@ -9,7 +9,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TipServiceTest {
     TipService tipService = new TipService();
 
-    @ParameterizedTest(name = "Граничные значения")
+    //Если проверяем только сервис, то и тестирование неверных данных не нужно, т.к. их обработка не
+    // реализована.
+    @ParameterizedTest(name = "Граничное значение {0}")
     @CsvSource({"-1", "0", "1", "499", "500", "501", "999", "1000", "1001"})
     void roundTipTest(BigDecimal num) {
         BigDecimal expected;
